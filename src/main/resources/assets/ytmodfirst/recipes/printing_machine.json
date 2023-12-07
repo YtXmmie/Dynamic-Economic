@@ -1,0 +1,40 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "ISI",
+        "RWG",
+        "III"
+    ],
+    
+    "key":
+    {
+        "I":
+        {
+            "item": "minecraft:iron_ingot"
+        },
+        "R":
+        {
+            "item": "minecraft:redstone_block"
+        },
+        "W":
+        {
+            "item": "minecraft:writable_book"  
+        },
+        "G":
+        {
+            "item": "minecraft:gold_ingot"  
+        },
+        "S":
+        {
+            "item": "minecraft:string"  
+        }
+    },
+    
+    "result":
+    {
+            "item": "ytmodfirst:printing_machine",
+           	"count": 1
+    }
+}

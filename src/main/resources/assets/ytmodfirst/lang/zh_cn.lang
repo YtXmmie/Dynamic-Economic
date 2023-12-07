@@ -1,0 +1,9 @@
+item.ytmodfirst.money.name=纸币 
+item.ytmodfirst.writable_engraving.name=空雕版
+item.ytmodfirst.written_engraving.name=雕版
+itemGroup.economical_tab=经济
+tile.printing_machine.name=印钞机
+container.virus_generator=印钞机
+Engraving.moneykey=%s
+moneykey=设置防伪码
+moneyvalue=设置面值

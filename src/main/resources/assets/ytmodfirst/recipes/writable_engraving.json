@@ -1,0 +1,23 @@
+{
+	"type" : "minecraft:crafting_shapeless",
+	
+	"ingredients":
+	[
+	{
+		"item" : "minecraft:gold_ingot"
+	},
+	{
+		"item" : "minecraft:writable_book"
+	},
+	{
+		"item": "minecraft:dye",
+		"data":0
+	}
+	
+	],
+	"result":
+	{
+		"item" :"ytmodfirst:writable_engraving",
+		"count": 1
+	}
+}

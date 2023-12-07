@@ -1,0 +1,9 @@
+item.ytmodfirst.money.name=Money 
+item.ytmodfirst.writable_engraving.name=Writable Engraving
+item.ytmodfirst.written_engraving.name=Written Engraving
+itemGroup.economical_tab=Economic
+tile.printing_machine.name=Printing Machine
+container.virus_generator=Printing Machine
+Engraving.moneykey=%s
+moneykey=Set your money key
+moneyvalue=Set the value
