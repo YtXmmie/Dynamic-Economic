@@ -99,7 +99,9 @@ public class ContainerPrintingMachiane extends Container{
         	ItemStack output = new ItemStack(ModItems.MONEY,1);
         	output.setCount(1);
         	output.setTagCompound(new NBTTagCompound());
-        	String key = engraving.getTagCompound().getString("moneykey"),Name = engraving.getDisplayName();
+        	String key="NULL",Name = engraving.getDisplayName();
+        	if(engraving.hasTagCompound() && engraving.getTagCompound().hasKey("moneykey"))
+        		key = engraving.getTagCompound().getString("moneykey");
         	output.getTagCompound().setString("moneykey", key);
             output.setStackDisplayName(Name);
             if (!StringUtils.isBlank(this.moneyvalue))
