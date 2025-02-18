@@ -1,0 +1,17 @@
+{
+  "block.ytmodthird.money_printer": "Money Printer",
+  "gui.ytmodthird.printer.tooltip.addition1": "When the written engrvaing put,",
+  "gui.ytmodthird.printer.tooltip.addition2": " the output would extends its ",
+  "gui.ytmodthird.printer.tooltip.addition3": "name, code and value",
+  "gui.ytmodthird.printer.tooltip.input1": "When paper put, the output would be money, ",
+  "gui.ytmodthird.printer.tooltip.input2": "while writable engravings put, ",
+  "gui.ytmodthird.printer.tooltip.input3": "the ouput would be written engraving.",
+  "gui.ytmodthird.title": "Please enter the code.",
+  "gui.ytmodthird.title2": "Please enter the value.",
+  "item.ytmodthird.money": "Money",
+  "item.ytmodthird.writable_engraving": "Writable Engraving",
+  "item.ytmodthird.written_engraving": "Written Engraving",
+  "itemGroup.dynamic_economy": "Dynamic Economy",
+  "money.code": "%s",
+  "money.value": "%s"
+}

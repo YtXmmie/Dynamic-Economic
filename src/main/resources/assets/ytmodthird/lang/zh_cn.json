@@ -1,0 +1,18 @@
+{
+
+  "item.ytmodthird.writable_engraving": "空雕版",
+  "item.ytmodthird.written_engraving": "雕版",
+  "item.ytmodthird.money": "纸币",
+  "block.ytmodthird.money_printer": "印钞机",
+  "itemGroup.dynamic_economy": "活力经济",
+  "money.code": "%s",
+  "money.value": "%s",
+  "gui.ytmodthird.title": "请输入防伪码",
+  "gui.ytmodthird.title2": "请输入面值",
+  "gui.ytmodthird.printer.tooltip.addition1": "当放入雕版时,",
+  "gui.ytmodthird.printer.tooltip.addition2": "输出栏将会继承其",
+  "gui.ytmodthird.printer.tooltip.addition3": "名称，防伪码和面值。",
+  "gui.ytmodthird.printer.tooltip.input1": "当放入纸使，输出栏会得到货币，",
+  "gui.ytmodthird.printer.tooltip.input2": "而当放入空雕版时，",
+  "gui.ytmodthird.printer.tooltip.input3": "输出栏会得到雕版。"
+}

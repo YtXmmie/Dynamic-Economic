@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "ytmodthird:block/money_printer",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "ytmodthird:block/money_printer"
+    },
+    "facing=south": {
+      "model": "ytmodthird:block/money_printer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ytmodthird:block/money_printer",
+      "y": 270
+    }
+  }
+}
