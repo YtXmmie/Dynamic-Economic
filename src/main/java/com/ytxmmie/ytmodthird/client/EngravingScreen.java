@@ -1,6 +1,7 @@
 package com.ytxmmie.ytmodthird.client;
 
 import com.ytxmmie.ytmodthird.YtModThird;
+import com.ytxmmie.ytmodthird.client.screen.PictureScreen;
 import com.ytxmmie.ytmodthird.network.EngravingPayload;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -31,6 +32,7 @@ public class EngravingScreen extends Screen {
     private TextFieldWidget value;
     private ButtonWidget cancelButton;
     private ButtonWidget doneButton;
+    private ButtonWidget pictureButton;
 
     private final ClientPlayerEntity player;
     private final ItemStack itemStack;
@@ -99,6 +101,13 @@ public class EngravingScreen extends Screen {
         this.cancelButton.active = true;
         this.addDrawableChild(cancelButton);
 
+        this.pictureButton = ButtonWidget.builder(Text.translatable("gui.ytmodthird.pictureButton"), this::onButtonClicked)
+                .dimensions(this.width / 2 -49, this.top + 48 + 10 + 32 + 30, 98, 20)
+                .tooltip(Tooltip.of(ScreenTexts.CANCEL))
+                .build();
+        this.pictureButton.active = true;
+        this.addDrawableChild(pictureButton);
+
 
 
         this.setInitialFocus(this.textField);
@@ -130,9 +139,13 @@ public class EngravingScreen extends Screen {
             nbt.putString("money_value", this.value.getText());
 
             ClientPlayNetworking.send(new EngravingPayload(nbt));
-
+            this.close();
+        }else if (button == this.cancelButton) {
+            this.close();
+        } else if (button == this.pictureButton) {
+            // 打开图片上传界面
+            this.client.setScreen(new PictureScreen());
         }
-        this.close();
     }
 
 
