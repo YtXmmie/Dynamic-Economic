@@ -22,6 +22,10 @@ public class ModENUSLanProvider extends FabricLanguageProvider {
         translationBuilder.add("itemGroup.dynamic_economy", "Dynamic Economy");
         translationBuilder.add("money.code", "%s");
         translationBuilder.add("money.value", "%s");
+        translationBuilder.add("gui.ytmodthird.picture.select", "select");
+        translationBuilder.add("gui.ytmodthird.picture.upload", "upload");
+        translationBuilder.add("gui.ytmodthird.picture.title", "Please upload a picture");
+        translationBuilder.add("gui.ytmodthird.pictureButton", "Picture");
         translationBuilder.add("gui.ytmodthird.title", "Please enter the code.");
         translationBuilder.add("gui.ytmodthird.title2", "Please enter the value.");
         translationBuilder.add("gui.ytmodthird.printer.tooltip.input1",

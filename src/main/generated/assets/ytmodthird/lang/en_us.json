@@ -1,5 +1,9 @@
 {
   "block.ytmodthird.money_printer": "Money Printer",
+  "gui.ytmodthird.picture.select": "select",
+  "gui.ytmodthird.picture.title": "Please upload a picture",
+  "gui.ytmodthird.picture.upload": "upload",
+  "gui.ytmodthird.pictureButton": "Picture",
   "gui.ytmodthird.printer.tooltip.addition1": "When the written engrvaing put,",
   "gui.ytmodthird.printer.tooltip.addition2": " the output would extends its ",
   "gui.ytmodthird.printer.tooltip.addition3": "name, code and value",
