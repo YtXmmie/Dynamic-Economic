@@ -1,7 +1,6 @@
 package com.ytxmmie.ytmodthird.item;
 
 import com.ytxmmie.ytmodthird.client.screen.EngravingInfoScreen;
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.NbtComponent;
 import net.minecraft.entity.player.PlayerEntity;
@@ -51,13 +50,7 @@ public class WrittenEngravingItem extends  Item{
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if (world.isClient) {
-            ItemStack stack = user.getStackInHand(hand);
-            NbtComponent nbtComponent = stack.getOrDefault(DataComponentTypes.CUSTOM_DATA, NbtComponent.DEFAULT);
-            NbtCompound nbt = nbtComponent.copyNbt();
-            String code = nbt.getString("money_code");
-            String value = nbt.getString("money_value");
-            String imageBase64 = nbt.getString("image");
-            MinecraftClient.getInstance().setScreen(new EngravingInfoScreen(code, value, imageBase64));
+            EngravingInfoScreen.open(user, hand);
         }
         return TypedActionResult.success(user.getStackInHand(hand));
     }

@@ -34,7 +34,7 @@ import java.util.Base64;
 @Environment(EnvType.CLIENT)
 public class EngravingScreen extends Screen {
 
-    private static final String TITLE_KEY = "gui.ytmodthird.title";
+    private static final String TITLE_KEY = "gui.ytmodthird.Engraving.title.code";
 
 
     private String selectedFilePath;
@@ -114,7 +114,7 @@ public class EngravingScreen extends Screen {
         this.cancelButton.active = true;
         this.addDrawableChild(cancelButton);
 
-        this.pictureButton = ButtonWidget.builder(Text.translatable("gui.ytmodthird.pictureButton"), this::onButtonClicked)
+        this.pictureButton = ButtonWidget.builder(Text.translatable("gui.ytmodthird.picture.button"), this::onButtonClicked)
                 .dimensions(this.width / 2 -49, this.top + 48 + 10 + 32 + 30, 98, 20)
                 .tooltip(Tooltip.of(ScreenTexts.CANCEL))
                 .build();
@@ -230,7 +230,7 @@ public class EngravingScreen extends Screen {
                 0x0000F0
         );
 
-        Text numText = Text.translatable("gui.ytmodthird.title2");
+        Text numText = Text.translatable("gui.ytmodthird.Engraving.title.value");
 
         this.textRenderer.draw(
                 numText,
@@ -261,14 +261,14 @@ public class EngravingScreen extends Screen {
         int textStartY = pictureButtonBottomY + 8; // 与按钮间隔 8 像素
 
         drawContext.drawCenteredTextWithShadow(this.textRenderer,
-                "图片建议尺寸 <= 128x128，Base64长度 <= 65535字符", this.width / 2, textStartY, 0xFF5555);
+                Text.translatable("gui.ytmodthird.picture.suggested"), this.width / 2, textStartY, 0xFF5555);
 
         drawContext.drawCenteredTextWithShadow(this.textRenderer,
-                "当前图片Base64长度: " + base64Length, this.width / 2, textStartY + 14, imageTooLarge ? 0xFF0000 : 0xAAAAAA);
+                Text.translatable("gui.ytmodthird.picture.now").copy().append(String.valueOf(base64Length)), this.width / 2, textStartY + 14, imageTooLarge ? 0xFF0000 : 0xAAAAAA);
 
         if (imageTooLarge) {
             drawContext.drawCenteredTextWithShadow(this.textRenderer,
-                    "图片过大，无法上传！", this.width / 2, textStartY + 28, 0xFF0000);
+                    Text.translatable("gui.ytmodthird.picture.warning"), this.width / 2, textStartY + 28, 0xFF0000);
         }
 
         // 设置 done 按钮状态

@@ -45,13 +45,7 @@ public class MoneyItem extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if (world.isClient) {
-            ItemStack stack = user.getStackInHand(hand);
-            NbtComponent nbtComponent = stack.getOrDefault(DataComponentTypes.CUSTOM_DATA, NbtComponent.DEFAULT);
-            NbtCompound nbt = nbtComponent.copyNbt();
-            String code = nbt.getString("money_code");
-            String value = nbt.getString("money_value");
-            String imageBase64 = nbt.getString("image");
-            MinecraftClient.getInstance().setScreen(new MoneyInfoScreen(code, value, imageBase64));
+            MoneyInfoScreen.open(user, hand);
         }
         return TypedActionResult.success(user.getStackInHand(hand));
     }

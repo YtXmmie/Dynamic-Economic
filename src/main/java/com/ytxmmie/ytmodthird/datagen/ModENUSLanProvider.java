@@ -25,9 +25,12 @@ public class ModENUSLanProvider extends FabricLanguageProvider {
         translationBuilder.add("gui.ytmodthird.picture.select", "select");
         translationBuilder.add("gui.ytmodthird.picture.upload", "upload");
         translationBuilder.add("gui.ytmodthird.picture.title", "Please upload a picture");
-        translationBuilder.add("gui.ytmodthird.pictureButton", "Picture");
-        translationBuilder.add("gui.ytmodthird.title", "Please enter the code.");
-        translationBuilder.add("gui.ytmodthird.title2", "Please enter the value.");
+        translationBuilder.add("gui.ytmodthird.picture.button", "Picture");
+        translationBuilder.add("gui.ytmodthird.picture.suggested", "Suggested image size <= 128x128，Base64 length <= 65535 characters");
+        translationBuilder.add("gui.ytmodthird.picture.now", "Image Base64 length now :");
+        translationBuilder.add("gui.ytmodthird.picture.warning", "The iamge is too large to upload!");
+        translationBuilder.add("gui.ytmodthird.Engraving.title.code", "Please enter the code.");
+        translationBuilder.add("gui.ytmodthird.Engraving.title.value", "Please enter the value.");
         translationBuilder.add("gui.ytmodthird.printer.tooltip.input1",
                 "When paper put, the output would be money, ");
         translationBuilder.add("gui.ytmodthird.printer.tooltip.input2",
@@ -38,6 +41,8 @@ public class ModENUSLanProvider extends FabricLanguageProvider {
                 "When the written engrvaing put,");
         translationBuilder.add("gui.ytmodthird.printer.tooltip.addition2",
                 " the output would extends its ");
-        translationBuilder.add("gui.ytmodthird.printer.tooltip.addition3", "name, code and value");
+        translationBuilder.add("gui.ytmodthird.printer.tooltip.addition3", "name, code, value and picture.");
+
+        System.out.println("ModENUSLanProvider generateTranslations called");
     }
 }

@@ -1,7 +1,15 @@
 package com.ytxmmie.ytmodthird.client.screen;
+import com.ytxmmie.ytmodthird.client.EngravingScreen;
+import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.texture.NativeImage;
 import net.minecraft.client.texture.NativeImageBackedTexture;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.NbtComponent;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NbtCompound;
+import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.minecraft.text.Text;
 import net.minecraft.client.gui.screen.Screen;
@@ -62,5 +70,16 @@ public class EngravingInfoScreen extends Screen {
     @Override
     public boolean shouldPause() {
         return false;
+    }
+
+    public static void open(PlayerEntity user, Hand hand) {
+
+        ItemStack stack = user.getStackInHand(hand);
+        NbtComponent nbtComponent = stack.getOrDefault(DataComponentTypes.CUSTOM_DATA, NbtComponent.DEFAULT);
+        NbtCompound nbt = nbtComponent.copyNbt();
+        String code = nbt.getString("money_code");
+        String value = nbt.getString("money_value");
+        String imageBase64 = nbt.getString("image");
+        MinecraftClient.getInstance().setScreen(new EngravingInfoScreen(code, value, imageBase64));
     }
 }
