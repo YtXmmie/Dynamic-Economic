@@ -8,12 +8,12 @@ import net.minecraft.network.packet.CustomPayload;
 import net.minecraft.util.Identifier;
 
 public record UploadImagePayload(String base64) implements CustomPayload {
-    public static final CustomPayload.Id<UploadImagePayload> ID = new CustomPayload.Id<>(Identifier.of("ytmodthird:upload_image"));
+    public static final CustomPayload.Id<UploadImagePayload> UPLOAD_IMAGE_PAYLOAD_ID = new CustomPayload.Id<>(Identifier.of("ytmodthird:upload_image"));
     public static final PacketCodec<RegistryByteBuf, UploadImagePayload> CODEC =
             CustomPayload.codecOf(UploadImagePayload::write, UploadImagePayload::read);
 
     public static void register() {
-        PayloadTypeRegistry.playS2C().register(ID, CODEC);
+        PayloadTypeRegistry.playS2C().register(UPLOAD_IMAGE_PAYLOAD_ID, CODEC);
     }
 
     public static UploadImagePayload read(RegistryByteBuf buf) {
@@ -26,6 +26,6 @@ public record UploadImagePayload(String base64) implements CustomPayload {
 
     @Override
     public CustomPayload.Id<UploadImagePayload> getId() {
-        return ID;
+        return UPLOAD_IMAGE_PAYLOAD_ID;
     }
 }

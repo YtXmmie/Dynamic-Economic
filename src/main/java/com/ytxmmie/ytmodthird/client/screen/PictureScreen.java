@@ -1,5 +1,8 @@
 package com.ytxmmie.ytmodthird.client.screen;
 
+import com.ytxmmie.ytmodthird.network.EngravingPayload;
+import com.ytxmmie.ytmodthird.network.UploadImagePayload;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.text.Text;
@@ -75,6 +78,7 @@ public class PictureScreen extends Screen {
         if (imageBase64 != null) {
             // 发送网络包到服务端（伪代码，需根据你的mod网络实现补充）
             // ModNetwork.sendToServer(new UploadImagePacket(imageBase64));
+            ClientPlayNetworking.send(new UploadImagePayload(imageBase64));
         }
         this.close();
     }
