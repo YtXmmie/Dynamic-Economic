@@ -1,7 +1,6 @@
-package com.ytxmmie.ytmodthird.client;
+package com.ytxmmie.ytmodthird.client.screen;
 
 import com.ytxmmie.ytmodthird.YtModThird;
-import com.ytxmmie.ytmodthird.client.screen.PrinterScreenHandler;
 import com.ytxmmie.ytmodthird.entity.PrinterBlockEntity;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;

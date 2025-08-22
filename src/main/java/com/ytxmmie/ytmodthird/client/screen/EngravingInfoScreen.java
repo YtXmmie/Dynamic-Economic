@@ -1,6 +1,4 @@
 package com.ytxmmie.ytmodthird.client.screen;
-import com.ytxmmie.ytmodthird.client.EngravingScreen;
-import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.texture.NativeImage;
 import net.minecraft.client.texture.NativeImageBackedTexture;
 import net.minecraft.client.MinecraftClient;

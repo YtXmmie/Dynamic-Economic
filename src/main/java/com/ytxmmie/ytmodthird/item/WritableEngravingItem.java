@@ -1,6 +1,6 @@
 package com.ytxmmie.ytmodthird.item;
 
-import com.ytxmmie.ytmodthird.client.EngravingScreen;
+import com.ytxmmie.ytmodthird.client.screen.EngravingScreen;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

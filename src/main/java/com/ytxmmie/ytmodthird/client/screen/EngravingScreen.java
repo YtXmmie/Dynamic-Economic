@@ -1,9 +1,7 @@
-package com.ytxmmie.ytmodthird.client;
+package com.ytxmmie.ytmodthird.client.screen;
 
 import com.ytxmmie.ytmodthird.YtModThird;
-import com.ytxmmie.ytmodthird.client.screen.PictureScreen;
 import com.ytxmmie.ytmodthird.network.EngravingPayload;
-import com.ytxmmie.ytmodthird.network.UploadImagePayload;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
