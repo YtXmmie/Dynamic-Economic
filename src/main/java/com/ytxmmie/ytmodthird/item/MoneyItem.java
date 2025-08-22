@@ -1,5 +1,8 @@
 package com.ytxmmie.ytmodthird.item;
 
+import com.ytxmmie.ytmodthird.client.screen.EngravingInfoScreen;
+import com.ytxmmie.ytmodthird.client.screen.MoneyInfoScreen;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.NbtComponent;
 import net.minecraft.entity.player.PlayerEntity;
@@ -34,9 +37,23 @@ public class MoneyItem extends Item {
 
         NbtComponent.set(DataComponentTypes.CUSTOM_DATA, stack, nbt);
 
-        if(nbt.contains("money_code")) {
-            tooltip.add(Text.translatable("money.code", stack.getOrDefault(DataComponentTypes.CUSTOM_DATA, NbtComponent.DEFAULT).copyNbt().getString("money_code"), NbtComponent.DEFAULT).formatted(Formatting.GRAY));
+        if(nbt.contains("money_value")) {
+            tooltip.add(Text.translatable("money.value", stack.getOrDefault(DataComponentTypes.CUSTOM_DATA, NbtComponent.DEFAULT).copyNbt().getString("money_code"), NbtComponent.DEFAULT).formatted(Formatting.GRAY));
         }
+    }
+
+    @Override
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+        if (world.isClient) {
+            ItemStack stack = user.getStackInHand(hand);
+            NbtComponent nbtComponent = stack.getOrDefault(DataComponentTypes.CUSTOM_DATA, NbtComponent.DEFAULT);
+            NbtCompound nbt = nbtComponent.copyNbt();
+            String code = nbt.getString("money_code");
+            String value = nbt.getString("money_value");
+            String imageBase64 = nbt.getString("image");
+            MinecraftClient.getInstance().setScreen(new MoneyInfoScreen(code, value, imageBase64));
+        }
+        return TypedActionResult.success(user.getStackInHand(hand));
     }
 
 
